@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Head>
-        <title>About Us - WebDev Newz</title>
+        <title>About Us | WebDev Newz</title>
       </Head>
 
       <h1 className="text-4xl font-bold text-center mt-10">About Us</h1>
