@@ -1,6 +1,8 @@
 import styles from "@/styles/Layout.module.css";
 import React from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import Nav from "@/components/Nav";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +17,9 @@ const geistMono = Geist_Mono({
 export const Layout = ({ children }) => {
   return (
     <div className={`${geistSans.className} ${geistMono.className}`}>
+      <NextTopLoader color="#12a" showSpinner={false} />
+      <Nav />
       <div className={styles.container}>
-        <nav className={styles.nav}> Navigation</nav>
         <main className={styles.main}>{children}</main>
       </div>
     </div>
