@@ -1,7 +1,5 @@
 import ArticleList from "@/components/ArticleList";
 
-import { server } from "@/config";
-
 export default function Home({ articles }) {
   return (
     <div>
@@ -11,7 +9,7 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/articles`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/articles`);
 
   const articles = await res.json();
 

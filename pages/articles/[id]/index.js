@@ -32,7 +32,9 @@ const article = ({ article }) => {
 };
 
 export const getStaticProps = async (context) => {
-  const res = await fetch(`${server}/api/articles/${context.params.id}`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_URL}/api/articles/${context.params.id}`
+  );
 
   const article = await res.json();
 
@@ -40,7 +42,7 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${server}/api/articles`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/articles`);
 
   const articles = await res.json();
 
