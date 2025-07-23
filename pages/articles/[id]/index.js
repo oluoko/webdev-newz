@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React from "react";
 import articleStyles from "@/styles/Article.module.css";
 import Link from "next/link";
 import { server } from "@/config";
 import Meta from "@/components/Meta";
+=======
+import { useRouter } from "next/router";
+import Head from "next/head";
+import React from "react";
+import articleStyles from "@/styles/Article.module.css";
+import Link from "next/link";
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 
 const article = ({ article }) => {
   // const router = useRouter();
@@ -10,10 +18,16 @@ const article = ({ article }) => {
 
   return (
     <>
+<<<<<<< HEAD
       <Meta
         title={article.title}
         description={article.body.substring(0, 150)}
       />
+=======
+      <Head>
+        <title>{article.title} | WebDev Newz</title>
+      </Head>
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
       <div className="w-[90vw] md:w-[65vw] my-8 md:my-20">
         <h1 className={articleStyles.title}>{article.title}</h1>
         <p className={articleStyles.body}>{article.body}</p>
@@ -29,8 +43,16 @@ const article = ({ article }) => {
     </>
   );
 };
+<<<<<<< HEAD
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/articles/${context.params.id}`);
+=======
+
+export const getStaticProps = async (context) => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
+  );
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 
   const article = await res.json();
 
@@ -38,7 +60,11 @@ export const getStaticProps = async (context) => {
 };
 
 export const getStaticPaths = async () => {
+<<<<<<< HEAD
   const res = await fetch(`${server}/api/articles`);
+=======
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 
   const articles = await res.json();
 
@@ -49,6 +75,7 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
+<<<<<<< HEAD
 // export const getStaticProps = async (context) => {
 //   const res = await fetch(
 //     `https://jsonplaceholder.typicode.com/posts/${context.params.id}`
@@ -71,4 +98,6 @@ export const getStaticPaths = async () => {
 //   return { paths, fallback: false };
 // };
 
+=======
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 export default article;

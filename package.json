@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+<<<<<<< HEAD
     "build": "next build",
+=======
+    "build": "next build && next export",
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
     "start": "next start",
     "lint": "next lint"
   },

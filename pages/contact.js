@@ -1,5 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import Meta from "@/components/Meta";
+=======
+import Head from "next/head";
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 import contactStyles from "@/styles/Contact.module.css";
 
 const Contact = () => {
@@ -48,7 +52,14 @@ const Contact = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <Meta title="Contact" description="Get in touch with us" />
+=======
+      <Head>
+        <title>Contact | WebDev Newz</title>
+        <meta name="description" content="Get in touch with us" />
+      </Head>
+>>>>>>> 194a9569932a12d45a6a461a20413a87b963a2ff
 
       <div className={contactStyles.container}>
         <main className={contactStyles.main}>
