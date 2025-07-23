@@ -1,7 +1,6 @@
 import React from "react";
 import articleStyles from "@/styles/Article.module.css";
 import Link from "next/link";
-import { server } from "@/config";
 import Meta from "@/components/Meta";
 
 const article = ({ article }) => {
